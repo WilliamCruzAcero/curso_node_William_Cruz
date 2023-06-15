@@ -5,6 +5,8 @@ const conectDB = async () => {
         await mongoose.connect( process.env.MONGO_DB, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
+            // useCreateIndex: true,
+            // useFindAndModify: false,
             serverSelectionTimeoutMS: 60 * 1000,
         })
         console.log('Base de datos conectada');
